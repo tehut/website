@@ -38,27 +38,27 @@ All of the shards are built with Kubernetes Statefulset, Services, Storage Class
 
 Let's create a Kubernetes cluster with 8 shards.  
 
-| ----- |
-| kubectl create -f mysqlshardingcluster.yaml |
-
+```
+ kubectl create -f mysqlshardingcluster.yaml
+```
 
 Next, create a MySQL Sharding Cluster including 8 shards.  
 
 * TPR : MysqlCluster and MysqlDatabase
 
-| ----- |
-| [root@k8s-master ~]# kubectl get mysqlcluster  
+```
+[root@k8s-master ~]# kubectl get mysqlcluster  
+
 
 NAME             KIND
 
 clustershard-c   MysqlCluster.v1.mysql.orain.com
-
- |
+```
 
 MysqlDatabase from clustershard-c0 to clustershard-c7 belongs to MysqlCluster clustershard-c.
 
-| ----- |
-| [root@k8s-master ~]# kubectl get mysqldatabase  
+```
+[root@k8s-master ~]# kubectl get mysqldatabase  
 
 NAME KIND  
 
@@ -76,7 +76,8 @@ clustershard-c5 MysqlDatabase.v1.mysql.orain.com
 
 clustershard-c6 MysqlDatabase.v1.mysql.orain.com  
 
-clustershard-c7 MysqlDatabase.v1.mysql.orain.com |
+clustershard-c7 MysqlDatabase.v1.mysql.orain.com
+```
 
 
 Next, let's look at two main features: high availability and RollingUpdate strategy.
@@ -95,7 +96,6 @@ zero data loss at same time.
 
 ![][3]  
 
-###    
 
 ###  Feature : RollingUpdate Strategy
 
@@ -137,8 +137,7 @@ Because TPR (currently CRD) does not support the rolling upgrade strategy, we ne
 
 Revision information is stored in MysqlCluster.Status and is no different than Statefulset.Status.
 
-| ----- |
-|
+```
 
 root@k8s-master ~]# kubectl get mysqlcluster -o yaml clustershard-c
 
@@ -174,7 +173,7 @@ items:
 
  spec:
 
-```
+
 
      dbresourcespec:
 
@@ -186,7 +185,7 @@ items:
 
        requestmemory: 400Mi
 
-```
+
 
  status:
 
@@ -200,7 +199,7 @@ items:
 
 kind: List
 
- |
+```
 
 ###    
 Example: Perform a rolling upgrade

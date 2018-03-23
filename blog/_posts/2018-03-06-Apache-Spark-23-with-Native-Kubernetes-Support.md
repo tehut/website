@@ -27,9 +27,7 @@ To try this yourself on a Kubernetes cluster, simply download the binaries for t
 
 
 
-| ----- |
-|
-
+```
 $ kubectl cluster-info  
 
 Kubernetes master is running at https://xx.yy.zz.ww
@@ -52,15 +50,13 @@ $ bin/spark-submit
 
    local:///opt/spark/examples/jars/spark-examples_2.11-2.3.0.jar
 
- |
+ ```
 
 To watch Spark resources that are created on the cluster, you can use the following kubectl command in a separate terminal window.
 
 
 
-| ----- |
-|
-
+```
 $ kubectl get pods -l 'spark-role in (driver, executor)' -w
 
 NAME              READY STATUS  RESTARTS AGE
@@ -69,22 +65,18 @@ spark-pi-driver   1/1 Running  0 14s
 
 spark-pi-da1968a859653d6bab93f8e6503935f2-exec-1   0/1 Pending 0 0s
 
-...
-
- |
+```
 
 
 The results can be streamed during job execution by running:
 
 
 
-| ----- |
-|
+```
 
 $ kubectl logs -f spark-pi-driver
 
- |
-
+```
 
 When the application completes, you should see the computed value of Pi in the driver logs.
 

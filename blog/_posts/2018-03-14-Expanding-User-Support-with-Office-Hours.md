@@ -2,9 +2,11 @@
 layout: blog
 title: "Expanding User Support with Office Hours"
 date: Wednesday, March 14, 2018
+pagination:
+  enabled: true
 ---
 
-**_Today's post is by Jorge Castro and Ilya Dmitichenko on Kubernetes office hours. _**
+**Today's post is by Jorge Castro and Ilya Dmitichenko on Kubernetes office hours.**
 
 Today's developer has an almost overwhelming amount of resources available for learning. Kubernetes development teams use [StackOverflow][1], [user documentation][2], [Slack][3], and the [mailing lists][4]. Additionally, the community itself continues to amass an [awesome list][5] of resources.
 
@@ -19,8 +21,9 @@ Having discussed a few broad ideas, we eventually decided to make [Kubernetes Of
 
 To give you an idea of what Kubernetes office hours are like, here's Josh Berkus answering a question on running databases on Kubernetes. Despite the popularity of this topic, it's still difficult for a new user to get a constructive answer. Here's an excellent response from Josh:
 
+[![](https://img.youtube.com/vi/Aj0yozuQ0ME/0.jpg)](https://www.youtube.com/embed/Aj0yozuQ0ME?ecver=2)
 
-It's often easier to field this kind of question in office hours than it is to ask a developer to write a full-length blog post. [Editor's note: That's legit!] Because we don't have infinite developers with infinite time, this kind of focused communication creates high-bandwidth help while limiting developer commitments to 1 hour per month. This allows a rotating set of experts to share the load without overwhelming any one person.
+It's often easier to field this kind of question in office hours than it is to ask a developer to write a full-length blog post. \[Editor's note: That's legit!\] Because we don't have infinite developers with infinite time, this kind of focused communication creates high-bandwidth help while limiting developer commitments to 1 hour per month. This allows a rotating set of experts to share the load without overwhelming any one person.
 
 We hold office hours the third Wednesday of every month on the [Kubernetes YouTube Channel][9]. You can post questions on the [#office-hours channel][10] on Slack, or you can submit your question to Stack Overflow and post a link on Slack. If you post a question in advance, you might get better answers, as volunteers have more time to research and prepare. If a question can't be fully solved during the call, the team will try their best to point you in the right direction and/or ping other people in the community to take a look. [Check out this page][7] for more details on what's off- and on topic as well as meeting information for your time zone. We hope to hear your questions soon!
 
